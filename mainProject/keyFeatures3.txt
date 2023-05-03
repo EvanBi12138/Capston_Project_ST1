@@ -1,0 +1,5 @@
+Index(['global_sentiment_polarity', 'num_hrefs', 'n_non_stop_unique_tokens',
+       'kw_avg_min', 'kw_min_avg', 'global_rate_positive_words',
+       'n_unique_tokens', 'global_subjectivity', 'kw_max_min',
+       'n_tokens_content', 'kw_max_avg'],
+      dtype='object')
