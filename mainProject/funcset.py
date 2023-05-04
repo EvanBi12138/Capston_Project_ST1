@@ -190,13 +190,13 @@ def outlier(dfN):
             Q1 = np.percentile(feature_data, 25.)
             Q3 = np.percentile(feature_data, 75.)
             IQR = Q3 - Q1  # Interquartile Range
-            outlier_step = IQR * 3  # adjust the IQR to reduce the removing of smaple
+            outlier_step = IQR * 2.5  # adjust the IQR to reduce the removing of smaple
             outliers = feature_data[
                 ~((feature_data >= Q1 - outlier_step) & (feature_data <= Q3 + outlier_step))].index.tolist()
             if not drop:
                 st.write('For the feature {}, No of Outliers is {}'.format(each_feature, len(outliers)))
             if drop:
-                df.drop(outliers, inplace=True, errors='ignore')
+                df.drop(outliers, inplace=True, errors='ignore'
                 st.write('Outliers from {} feature removed'.format(each_feature))
         return df
 
